@@ -1,0 +1,89 @@
+% ============= single column ==============
+%\documentclass[a4paper,10pt]{article}
+% ============= Double Column ==============
+\documentclass[conference]{IEEEtran}
+% ==========================================
+
+\IEEEoverridecommandlockouts
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+	
+\fi
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{units}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{graphicx}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\usepackage{comment}    %to use commnet command
+\usepackage{setspace}
+
+\usepackage{lipsum} % to use fig in multicolumn
+\usepackage{acronym}
+
+%Definition of the acronyms used in this paper
+\acrodef{5G}{five generation}
+\acrodef{CAPEX}{capital expenditures}
+\acrodef{OPEX}{operating expenditures}
+
+\renewcommand{\figurename}{Figure}
+
+\newcommand{\PC}[1]{\ensuremath{\left(#1\right)}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\arraybackslash}m{#1}}
+
+% correct bad hyphenation here
+\hyphenation{al-go-rithm allows op-tical net-works semi-conduc-tor ubi-quitous energy expe-riments another Fi-gures co-verage si-mulation decrea-sing speci-fically si-mulations dimensio-ning topo-logy mo-nitoring me-chanism acknow-ledgement diffe-rent pro-blem se-veral probability although communication access minimal expe-rience intero-perability effectively signalling simula-ting}
+
+\begin{document}
+    \bstctlcite{IEEEexample:BSTcontrol}
+
+	% make the title area
+	\title{CDN Slicing Resource Management in Edge Computing}
+
+\author{
+\IEEEauthorblockN{Eduardo~S.~Gama, Roger~Immich and Luiz~F.~Bittencourt}
+\IEEEauthorblockA{Institute of Computing - State University of Campinas, Brazil \\ eduardogama@lrc.ic.unicamp.br, bit@ic.unicamp.br}}
+
+	\maketitle
+
+	\begin{abstract}
+	    Integrated wireless-optical access networks based on \ac{RoF} has become one of the main technological trends in \ac{5G} networks due to its intrisic advantages such as high transmission capacity and immunity to electromagnetic interference. Moreover, it enables the processing of several radio frequency (RF) signals in a centralized entity, reducing both \ac{CAPEX} and \ac{OPEX}. 
+	    %
+	    This paper describes a testbed developed in the framework of the H2020 Futebol project and presents preliminary experimental results on the impact of using \ac{RoF} system for zigbee-based \ac{IoT} applications based on packet error rate and \ac{RSSI} values.
+	    %
+	    Furthermore, we highlight some challenges to the use of \ac{RoF} system in the \ac{IoT} landscape.
+	    %RoF system to monitor the environment over a university campus (temperature, humidity, noise, etc.) using an optical infrastructure. 
+	    %Among other aspects we will evaluate the performance of different multi-hop protocols and the efficiency of RoF and D-RoF (Digitized Radio over Fiber) technologies.
+	\end{abstract}
+
+    \begin{IEEEkeywords}
+    	CDN, Content Delivery Networks, Cloud Computing, edge computing, fog computing, VNF.
+    \end{IEEEkeywords}
+
+    %This command resets all acronyms to not used. Useful after the abstract to redefine all acronyms in the introduction.
+    \acresetall
+    
+    \input{intro}
+    
+    \input{fog-model}
+
+    \input{releated-work}
+    
+    \input{challenges}
+    
+    \input{conclusion}
+    
+    \input{acknowledgements}
+
+	\bibliographystyle{IEEEtran}
+	\bibliography{references}
+	
+\end{document}

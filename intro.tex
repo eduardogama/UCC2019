@@ -1,0 +1,50 @@
+
+\section{Introduction}
+\label{sec:intro}
+
+%Live streaming is becoming increasingly popular as more and more enterprises want to stream on the Internet to reach a world-wide audience. Common examples include radio and television broadcasts, live events with a global viewership, sporting events, and multimedia conferencing
+
+%*******Introduction of the CDN technology and Fog networks**********
+The Content Delivery Networks (CDNs) seeks to provide efficiently the content geographically closer to the end-user. The main objective of CDN cache copies of data (image, video, movie, etc) to speedup the computation. Nowadays, the video streaming services on the CDN providers represents the majority of the internet traffic, the cisco forecast \cite{Ma:WWW13} estimates that in 2021 70\% of all internet traffic will be dominated by the video-streaming, whereas for mobile devices this estimate respresent 78\% of all mobile data traffic. Corrently, traditional CDN providers are designed to delivery content through big datacenters, into the core networks, with static end-users devices and stable Internet link, which have large bandwith and low latency as main characteristics. These systems still don't lead in consideration the possibility to use the egde/fog network to improve their services. Trough the egde computing which has as main idea use small datacenter/devices closer to the end-user at the edge network to compute/storage end-user applications. This way, CDN systems may aprovetar new era of technology to melhorar seu serviço de entraga de conteudo sob demanda.
+%Insight and perspectives for content delivery networks, 2016. https://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.pdf
+
+Due to the CDN providers have to maintain Quality of Experience (QoE) guaratees and low latency, besides the exchange of data between the users and network providers be growing up exponentially year-by-year, which could causing a time-varying shifts in content demand for in their videos, as well as increases the delay. Recent works [1] [2] [3] highlight fog/edge computing to handle with these aspects and attend a variety of mobile and static end-users devices efficiently. 
+% [1] sensor, [2] JSAC, [3] On-the-fly QoE-Aware Transcoding in the Mobile Edge
+This approach to multiple devices and datacenters (with different types of capacity), organized hierarchically capable to accomplish computation and storage operation,  closer to the user. This way, edge/fog computing has novel challenges for how data processing and users are managed to improve quality of service (QoS) and QoE, as well as reduce costs, as well [1]. 
+Leading CDN providers such as Akamai, LimeLight, Level 3 and MaxCDN have made large investiments in edge servers in emerging markets like Asia, South America, and Africa.
+Moreover, this paradigm has attracted big companies such as Intel, Qualcomm, IBM, Cisco which have mentioned a large growth in the network's edge in a near future.
+Netflix, Google and Amazon with interest to improve yours CDN services in order to save bandwith and operational costs without violate QoE garantees. % Add referees about companies with interests in fog computing paradigm
+
+%An CDN service consists of a set of services that can be instantiated virtually, through VNFs,  will be presented later in this paper.
+
+%trancosder, streamer, cache and orchestrator where each of can be instantiate separatelly  is To deliver the content NFV   enables virtualization  of  network  functions  that  can  be  deployed  as virtual  machines  on  general  purpose  server  hardware  in  cloud environments,  effectively  reducing  deployment  and  operational costs.
+
+%Os recentes surgiemntos de armazenamentos de provedores na nuvem tais como Amazon S3, Nirvanix e rackspace teêm aberto novas oportunidades de Prover CDNs custos efetivos.
+%
+%Recentes pesquisas seguem na direção de utilizar novas tecnologias emergentes 
+%
+%Devido ao deslocamento de parte do processamento para a borda da rede a decisão da computação executada e localização do armazenamento está sujeita a restrições da aplicação e localização geográfica do usuário. Enquanto o primeiro pode ser especificado de diferentes maneiras, como na forma de restrições de QoS, este último depende do comportamento humano (ou sistema autônomo). Em última análise, o comportamento do usuário determina o par de tempo/posição de um dispositivo que, juntamente com as restrições de QoS, pode ser usado para criar classes de aplicativos relevantes para o gerenciamento de recursos e agendamento em um ambiente de computação em névoa [11]. Ao reconhecer diferentes classes de aplicativos, este trabalho tem como objetivo principal estudar as diferentes politicas de escalonamento, algoritmos ou mecanismos para o balanceamento de carga no ambiente de computação em névoa, que completa tarefas reais dentro do prazo, aumenta a taxa de transferência e utilização da rede, mantendo a consistência dos dados com menos complexidade para atender a demanda atual de usuários finais
+
+%Motivations of the paper
+%Nowadays, there is a large amounts of work addressing CDN with datacenters, while much less work about cache hierarquies and the usage in fog computing on the edge network. The cache 
+
+%A troca de dados entre usuário e cloud para videos em UHD satura e causa queda de redes backhaul,bem como aumenta o delay. Desta forma, é essencial implementar a computação na nuvem com a fog para trazer o trafego de dados, computação e funções da rede para a borda da rede, da forma que o usuário tenha a melor qualidade de experiancia possivel. 
+%A arquitetura de computação em névoa é baseada em pequenos data centers distribuidos na borda da rede, nomeados de cloudlets, com o objetivo de evitar/reduzir o congestionamento do tráfego no núcleo da rede, reduzir a latência na comunicação da informação, além de facilitar a paralelização e/ou distribuição de procedimentos entre aplicações [3]. As cloudlets tem a capacidade de computação menor que os data centers usados no núcleo da nuvem e estão mais próximas aos usuários, mas eles podem contar com os data centers na nuvem sempre que necessário. Esta abordagem para vários data centers (com diferentes tipos de capacidade), hierarquicamente organizados, tem implicações sobre como processamento de dados e dos usuários são gerenciados para melhorar a qualidade do serviço (QoS - Quality of Service), bem como reduzir os custos, assim, trazendo novos desafios [][1].
+
+
+%Objectives of the paper
+% Address the content of this paper as questions to be answers
+Whith the large interestes of the technological enterprises leaders in invests in edge servers.
+This paper seek to discuss the most recent works in CDN networks, specially addressing emerged technologies, such as VNF and SDN which became feasible the CDN operations whithin the edge network, thereby provision CDNaaS in enviroments multi-tier environment into the edge. The architecture used to provision CDN services, and a better QoE to the user, and the caracteristics of each component that compound this architecture into to cloud. How it works in a cloud environment? How can content caching systems whithin the edge network could be made more efficient, scalable and cost-effective?
+provide the technical elements to build mechanisms for cost- and quality-optimized CDN provision.
+
+
+%Paper organization
+This paper is organized as follows. 
+
+
+%RoF systems consist of heterogeneous networks composed of wireless and optical links. Unlike traditional optical communications networks, in which a baseband signal is transmitted into the optical fibers, in RoF one or multiple analog carriers are transported into the fibers.
+%The RoF link lies within the physical layer of the wireless system to be supported, and thus, it becomes an extension of the radio access domain. This enables the possibility to dynamically allocate radio resources, optimizing the spectrum utilization.
+%
+%Motivated by the advantages provided by the RoF technology and the ubiquity enabled by the Internet of Things (IoT), this experiment aims to develop an efficient RoF environmental monitoring system at the University of Campinas (UNICAMP) to monitor the environment in the university using an optical infrastructure already deployed with underused resources and dark fibers. Moreover, this experiment will deploy equipments at UFRGS to offer a configurable, distributed RoF testbed.
+

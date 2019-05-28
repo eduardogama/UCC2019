@@ -1,0 +1,112 @@
+\section{multi-tier Fog computing model}
+\label{sec:fog-model}
+
+ A uso da computação em névoa para a distribuição de conteudo CDN pode ser vital para a good QoS and QoE garantees. In these kinds of scenarios - that make up the fog network - may be any access points (AP) can be extended to also provide computing and storage services. The APs may be any device that offers wired/wireless network connection to the end-user, such as smart phones, tablets, laptops, connected vehicles.% Cite bit paper 
+
+To clarify the possibilities, we first introduce a multi-tier fog computing model detailedly in Figure \ref{fig:fog-model}. As we can see, the higher tier is composed by the Provider that offers video streaming services (e.g. Netflix, Amazon, Youtube) located at the cloud, and makes either use of their own cache systems or leases one offered by CDN providers. %(... CDN providers: Akamai, CloudFlare, Rackspace, Amazon's AWS, MaxCDN CDN nodes)
+These providers operate original content in datacenters at the WAN (long-haul netwoks). In fog network, the APs located at the fog are responsible to provisioning resources to CDN providers allocate their caches. Notice that the caches are to multi-hop away from the content provider/consumer. A very popular fashion to organize the cache placement content hierarchicaly, and bi-directional communication. In addition, each content pode ser splitted dynamically in a set of pieces in order to serve the end-users, taking into account different aspects, such as the mobility presented by the user and the possibility to predict the moving directing. 
+
+With new possibilities being created to offer better services and the working of the internet. As long as the network becomes more robustness, the problem become more complex and new challenges arises to be solved. To tailored a CDN systems with multi-tiers environment into the fog, different characteristics have to be studied such as cache allocation, placement, replacement and selection caches, usually, making real-time decisions. As different cache sizes being allocation over the tiers to storage a range of content to provisioning a region. Also, an cache size in an AP device have to be able of deal a set of different content pieces, in order to the end-users may have QoE garaties. Thus, different level of granularity into the APs devices arises, if the granularity of certain areas becomes too fine, scalability issues begin to appear. Dividing the content of the fog in the network over the APs at the right level of granularity is a complex problem in its own right.
+% map unit (Algorithmic Nuggets in Content Delivery)
+ 
+% An network can be represented by a $(n+2)$-partite graph with $G = N_{c} \cup ( \bigcup_{i}^{N} V_{f}^{i}) \cup V_{d}$ 
+
+\begin{figure}
+	\centering	
+    \includegraphics[width=\linewidth]{images/intro.pdf}
+	\caption{Experimental setup for the spatial-based methodology.}
+    \label{fig:fog-model}
+\end{figure}
+
+For retrieve a data afetwards a VM (or content, service, etc) being allocated or allready exists. The operations feitas pela aplicação podem ser receiver-driven, such as used in Content-Centric Network (CCN) and named data network (NDN) paradgm. 
+Organizadas de hierarquiquamente, one content object name could be retrive trough an url name "ucla/videos/demo.png". For a large video that is shareded em a set o chunks, thereby  que uma requisiçao pode ser feita especificando um chunk do video  da seguinte foma "ucla/videos/demo.png/1".
+
+Um provedor de conteudo possui a set of repositorios CDN geograficamente distribuidos. As requisições dos usuarios para conteudos geralmente são feitas atraves de HTTP GET requests. To provisioning the content, the CDN redirects the request through either DNS redirection [38] or IP-layer anycast [41]. 
+
+O conteudo provido por repositorios CDN geograficamente distribuidos, visando estar proximo ao usuario. Procura melhorar o troughput da rede. Mas para isso o provedor do conteudo alvo.  CDN system
+
+
+\begin{figure}
+	\centering	
+    \includegraphics[width=\linewidth]{images/router-processing-flow.pdf}
+	\caption{State machine of rountig operation.}
+    \label{fig:fog-model}
+\end{figure}
+
+    
+\section{Business model perspective}
+
+A flexibilidade ao utilizar da edge networks infrastructure oferecem new oportunidades para melhorar o servico, abordando metricas e perspectivas que geralmente são analisadas de forma independente. It can be seen in three different perspectives:
+
+% Look at Offloading Content with Self-Organizing Mobile Fogs reference, present three respectives business ains and costs.
+
+\begin{itemize}
+
+\item \textbf{End-user perspective:} uninterrupted connectivity and communication services, smoth consumer experience.
+
+\item \textbf{Content provider perspective:} connected intelligent 	transportation systems, road-side service units, sensors, and mission critical monitoring/traking services.
+
+\item \textbf{Network operator perspective:}  scalable, energy- efficient, low-cost, uniformly-monitored, programmable, and secure communication infrastructure.
+
+\end{itemize}
+
+%% CDN providers: Akamai, CloudFlare, Rackspace, Amazon's AWS, MaxCDN CDN nodes
+
+
+\section{Distribution of Information Centric}
+
+
+\section{CDN Slicing Architecture}
+\label{sec:cdn-slicing-archi}
+
+This CDN service based on fog computing consider the scenarios presented in Fig. \ref{fig:fog-model}. This section is interested in make up an architecture capable to provisioning this service in on-demand manner. In order to investigated aspects as scalability over the live migration, granularity of different contents and providers, aside from mobile predictability considering the social medias and moving direction. Initially, the model at the Fig \ref{fig:intro} shows two layer components: the user device, fog nodes into the multi-tier APs and the cloud providers. 
+
+The usage of CDN multi-tier fog platform rather than the cloud CDN have to be consider, mainly, the cost reduction.
+The Edge server placement problem is responsavel de selecionar um nó na borda da rede. 
+There will exists two kind of nodes in the network, which are both known and unknown nodes due to the flexibility presented by the edge. The edge node location could respresented by a tuple da $<< city, AS(Autonomous\ System)>>$. let us assume that in current scenario a set of files $S = \{s_{1}, s_{2}, ..., s_{n}\}$ 
+
+The problem to cost minimization could be reducted to the problem "the optimal bandwidth allocation problem" (OBAP), described in [].
+
+The cost of a solution could range of an agreement with a CSP. As the focus of CDN apps are high in/out of datas, this work leverage the concerns of price machines needed to the CDN utilization and the charge of fog  networks, aside from the cost of download and upload files in order to sync different nodes and distribute the files to end-users.
+
+For provide a high-quality experience sharing into the same regional APs, the model 
+
+For provide a high-quality experience general components have to take advantage of the moving direction presented by the user. This way, the monitoring and analytics modules may cooperate togheter with advanced machine learning, neural networks techniques for decision-making. Characteristics as users location, direction movement, users behaviour, content resquested, amount of stored data, data traffic needs, cloudlets capacity, newotrk capacity, and so on.
+
+make location-based virtual machine migration feasible in the Fog computing paradigm.
+
+to build pro a hierarchical, bi-directional computing infrastructure: edge devices communicate with cloudlets and cloudlets communicate with clouds. Cloudlets can also communicate with each other to perform data and process management in order to support application requirements, and to exchange Fog control/management data (such as user device and application state).
+
+\begin{figure*}
+	\centering%%
+    \includegraphics[width=\linewidth]{images/arch-cloud-fog.pdf}
+	\caption{CDN Slicing Architecture for the spatial-based methodology.}
+    \label{fig:intro}
+\end{figure*}
+
+%an architecture thet offer CDN as a Service (CDNaaS) on demand over the end-users have to take some decisions, such as resource allocation, placement, real-time management decisions, maintaining the service level agreement.
+
+
+al-time management decisions, maintaining the service level agreement.
+
+With the possibility to provision algorithms as a set of function trough VNFs to provision end-user  some service, CDNaaS may be decouple in specific functions which will be orchestrate over the network to provision QoE garantees for end-users. Below presents an Architecture standard ETSI for CDN.
+
+To deliver an efficient CDNaaS into an heterogeneos network environment with multi tier fog nodes, our envisioned architecture showed up in Fig 1 is composed by a cloud provider where is contented big datacenters, from here the when the user request a movie. The fog computing may be organized hierarquicaly by multiple levels from which serve como meio de prover o serviço de CDN. As can be seen in fig 1 an user 1 receiving a content from WiFi and the another user is receiving from both LTE and user 1.
+
+The most recently CDN architectures highlight Network Function Virtualization (NFV) principle para permitir a execução de serviços especificos em servidores remotos. Accorndlying to [], NFV supports a wide range of services by orchestrating the VNF (virtual network function) deployment and operation across diverse computing, caching, and networking resources over the multi-tier fog nodes. Whereas SDN  paradigm decouples the control plane from the underlying data plane in a centralized manner. It is independent from NFV, but it can add more flexibility to the SFs. Therefore, a  hybrid  concept  may  exploit  both  NFV  and  SDN  at  the same  time.  Virtualization  concepts  are  integrated  in  different areas such as cloud and telecommunication for more services flexibility provisioning. This combination technology may be deployed as virtual machines capable to provision slices of CDN components on-the-fly in a dynamic manner [2][3]. This way, whenever CDN as a Service (CDNaaS) may be offered on demand for the end-users. In addition, the use of NFV and SDN jointly can take advantage of an platform prepared to deal with an multi-tier edge environment. %SDN  paradigm  then  decouples  the  control  plane  from  the underlying data plane in a centralized manner. It is independent from NFV, but it can add more flexibility to the SFs. Therefore, a  hybrid  concept  may  exploit  both  NFV  and  SDN  at  the same  time.  Virtualization  concepts  are  integrated  in  different areas such as cloud and telecommunication for more services flexibility provisioning.
+%Logical partitions in NFV is also known as resource slicing, which divides the network into slices made of different resources and capacities so as to offer differen- tiated services for heterogeneous use cases and enable creation of customized services with fine control fea- tures of QoS [7, 8, 12, 13].
+
+%\begin{figure}[!t]
+%	\centering
+%    \includegraphics[width=\linewidth]{images/archi-ETSI.pdf}
+%	\caption{Experimental setup for the spatial-based methodology.}
+%    \label{fig:intro}
+%\end{figure}
+
+which delivery the distributed content,
+
+it is needed instantiate VNFs that may replace virtualization services among de nodes in defirent tiers of the network. This way 
+
+With the Needed of download high quality multimedia content by the mobility users, this section introduces an architecture multi-tier composed by heterogeneous wireless network access (fig). Due to propogation of a In a network The devices  Due to the diference of range among the devices such as Cloud, ISP, LTE, WiFi, D2D. 
+
+introduces an architecture composed of a cloud computing (Tier 1) together with multi-tier fog nodes (Tiers 2, 3, and 4), which work collaboratively to enable service migration for video distribution with QoE support. In such architecture, we consider fully connected and fully fog-enabled scenario, where fog nodes are hierarchically organized to provide video services for end-users. There may be widely distributed local fog nodes, e.g., mobile devices (i.e., Tier 4), where such fog node relays the video content via device-to-device (D2D) wireless communication for mobile devices with high and similar traffic demands could cooperate with each other to form a D2D network. The neighborhood fog node, e.g., Base Station (BS) or Access Point (AP) (i.e., Tier 3), supports a few dozen to perhaps a few hundred local fog nodes. Above these would be regional fog node, e.g., baseband unit (BBU) or Internet Service Provider (ISP) (i.e., Tier 2), managing city-wide coordination. On the top of such multi-tier architecture, there is the cloud (i.e., Tier 1). 

@@ -1,0 +1,128 @@
+\section{CDN Provisioning and Releated Work}
+\label{sec:releated-work}
+
+This section presents the main previous work on the employment of CDN solutions on the Cloud computing and other realted technologies. 
+
+% CDN-as-a-Service Provision Over a Telecom Operator’s Cloud
+% Managing QoS Constraints in a P2P-Cloud Video on Demand System.
+% OpenCache: A Software-defined Content Caching Platform.
+
+
+% [ICC'15] Joint Content-Resource Allocation in Software Defined Virtual CDNs
+% [CLCN'17] Optimal and Cost Efficient Algorithm for Virtual CDN Orchestration
+% [CLCN'16] Scalable and Cost Efficient Algorithms for Virtual CDN Migration
+% [ComNet'17] OPAC: An optimal placement algorithm for virtual CDN
+Hatem \textit{et al.} [1][2][3][4] highlight Software Defined Network (SDN) and Network Function Virtualization (NFV) principles into the cloud. The SDN/NFV-based approach allow to virtualization specific functions in remote servers. This way, the migrations of CDN services can be virtualized over different datacenters. Hatem et al. addresses orchestration and cache problem, its work develope an exact algorithm for deciding the optimal locations to place CDN functions. The proposed algorithm including content caching and request redirection is introduced with operatong system, network, and quality of experience constraints. Therefore, for managing the CDN is made by a centralized way, and use end-user as target to make Device-to-device communication but not explores mobility. End-users requests will redirected to an optimal edge cloud location, whithout a different multi-tier level edge devices. Llorca \textit{et al.} [ICC'15] propose a virtual cache network deployed fully in software over a programmable distributed cloud network infrastructure that can be elastically  consumed and optimized using global information about network conditions and service requirements called SDvCDN. This approuch address placement (facility location), routing (flow network) and resource allocation (network design) problems.
+
+% [ICDCSW'16] Fog Cloud Caching at Network Edge via Local Hardware Awareness Spaces
+% [Computer'15] A Cloud Visitation Platform to Facilitate Cloud Federation and Fog Computing
+Zhanikeev \textit{et al.} [ICDCSW'16] proposes an caching technology distributed in 2-tier. Where the top layer is the original copy running in large-scale storage cloud, and the bottom tier are maintained by each participant of fog. The cloud has access to a number of fog nodes distributed regionally, and each regional network edge can balance the inter-cloud traffic load by keeping a portion of popular content at each local cloud. The network edge is splitted in two kinds of caches, the first one is an in-VM storage, implemented as files on virtual disk. The in-VM caching is volatile, either have to migrate with their caches or destroy them at each population upgrade. The second knd of cache is a storage facility outside of VM but inside a given fog. The pros of this cache are two-fold. First, it can be much larger than the in-VM cache. Secondly, the contents are persistent for the population in that fog cloud. The technology presented in previous work [Computer'15] is not limited to caching and storage in general, and can work for any generic service, including Hadoop environments, sensors, etc.
+
+% [TNSM'17] CDN-As-a-Service Provision Over a Telecom Operator's Cloud
+% [SIGCOMM'13] Pushing CDN-ISP collaboration to the limit
+Frangoudis \textit{et al.} [1] and Frank \textit{et al.} [2] design an architecture for telco operator, which allows the interfaces and management tools to deploy a CDN infrastructure and lease it on demand. In [2] specifically design a prototype system called NetPaaS (Network Platform as a Service). In this case PaaS and IaaS services are provisioned by telco operator. The NetPaas support virtualization and physical CDN deployments, which allow the CDN operator can be in full control of the virtual resources. Whereas, in [1] offer a business model to the content provider lease a the CDN service in a Software-as-a-Service (SaaS) manner. Thus, the telco operator is capable to be on charge of the infrastructure and the CDN service. In Addition, the telco operator also may take better decision of the resource allocation. It should be noted that both works relies on the old and well-known technique called DNS forwarding [3] for load balancing – refer to [6] for a review of the various load balancing techniques.
+
+
+% [JNCA'16] Hybrid multi-tenant cache management for virtualized ISP networks
+% [CNSM'14] Proactive multi-tenant cache management for virtualized ISP networks.
+Claeys \textit{et al.} [1] propose an Integer Linear Programming (ILP) formulation of multi-tenant content placement and server selection problem. The scenarioes tailored of the work was the Internet Service Providers (ISPs). The main objective is to maximize the hit ratio of cache content into the ISPs servers, thus minimizing the bandwith consuoption. to become more realistic the proposed model 
+take into account the migrations overhead introduced by the frequent contents requested. The proactive and reactive placement strategies are studied. The proative approach mortou ter um desempenho melhor na migração de conteudo durante horas de pico e mais cache hits on the first request of popular content. However, para alcançar este desempenho é preciso ter uma forte precisão na predição de popularidade do conteudo, o que torna um complicado devido as caracteristicas do trafego VoD, que ocorre grande variação de trafego durante o tempo. To deal with these limitations, this paper proposes a hybrid cache management system. The espaços em cache são distribuidos gegraficamente para a execução da estrategia proatica, wherever occur unexpected pattern changes of request pattern the estrategia reativa é executada simultaneamente. 
+
+% [INFOCOM'16] Dynamic Resource Orchestration for Multi-task Application in Heterogeneous Mobile Cloud Computing 
+Qi Qi \textit{et al.} [I'16] propose a orhestrator framework to play offload workflows in heterogeneous Mobile Cloud Computing Environments. Which the workflow tasks are ddistributed at achieving maximal perfomance experienced by end users and minimal cost os cloud resources. The app responsible for realizar o offladof the tasks work separately, sem a possibilidade de reaproveitar as tarefas de workflows já executados. Este trabalho aborda aspectos importantes de predição de mobilidade and distribuir as tasks da melhora maneira possivel em diferentes redes utilizando o conseito de virtualização. The work [I'16] focuses an orquestração de workflows levando em consideração o custo de alocação, consumo de energia e a mobilidade do dispositivo. In CDN systems exitem  caracteristicas distintas entre offload de aplicações, such as cache hit ratio which is the compartilhar conteudo em comum entre usuarios finais, the timestamp de acordo com o popularity of content.
+
+% [SENSORS'18] Service Migration from Cloud to Multi-tier Fog Nodes for Multimedia Dissemination with QoE Support
+
+Rosario \textit{et al.} [1] apresenta uma arquitetura para servicos de migração ao vivo de VM da nuvem para multiniveis da fog. O cenario experimental a nuvem distribui o conteudo de video para os diferentes niveis da fog. A arquitetura é baseada no paradigma sdn para, distribuição de video com suporte a QoE. 
+The work split the multi-tier fog in three tier in order to their cover, storage, upload and download capacity. Important aspects could be tailored to support generic content and IoT environments, besides work with both private and public clouds. A divisão da nuvem em multiniveis se dá pelas caracteristicas do  dispositivos conectado a nuvem, e não por qualquer interconexão entre esses aparelhos. The paper tem como focus prover tecnologias capazes de tornar este ambiente factivel, e melhorar o provisionamento de conteudo de servicos de stream de video.
+
+
+\begin{table*}[ht]
+\begin{center}
+\begin{tabular}{|c|p{1.8cm}|p{1.5cm}|p{1.8cm}|c|p{2.3cm}|p{3.5cm}|}
+
+\toprule
+\multicolumn{7}{|c|}{Related Work}\\
+\midrule
+Paradigma & Referencia & Tipos de Conteudo & Mobilidade & tipo & Mecanismos & Problemas \\
+\midrule
+MEC & [8][15][16] & videos & Not & files & cache [8], cache+transcoder [15][16] & cache placement problem, content request load assignment \\
+\midrule
+
+Muti-cloud & [6][7][14] [17][19] & generic, video 	[17] & Not & files & cache[6][7][14] [19], transcoder & \\
+
+\midrule
+
+ & & & & & & \\
+
+\bottomrule
+
+\end{tabular}
+\end{center}
+\end{table*}
+
+\begin{table*}[t]
+\begin{center}
+  \begin{tabular}{c|cc|cc|cc|cc}
+\toprule
+\multicolumn{9}{c}{Related Work}\\
+\toprule
+Attack & \multicolumn{2}{c|}{Apache} & \multicolumn{2}{c|}{Apache with seven} & \multicolumn{2}{c|}{nginx} & \multicolumn{2}{c}{nginx with seven}\\
+\midrule
+& Success Rate & TTS & Success Rate & TTS & Success Rate & TTS & Success Rate & TTS\\
+\midrule
+Slowloris & 0.0\% & $\infty$ & 98.7\% & 0.15s & 15.3\% & 0.00s & 96.5\% & 0.01s  
+\\[2pt]
+\midrule
+HTTP POST & 0.0\% & $\infty$ & 97.3\% & 0.14s & -- & -- & -- & --   
+\\[2pt]
+\midrule
+Slowread & 13.8\% & 1.99s &  97.2\% & 0.11s & 5.2\% & 1.29s & 96.7\% & 0.02s 
+\\[2pt]
+\midrule
+Resurrected Slowloris & 31.9\% & 1.28s  & 95.6\% & 0.58s & 4.3\% & 0.00s  & 99.6\% & 0.01s 
+\\[2pt]
+\bottomrule
+\end{tabular}
+
+\end{center}
+% \vspace{-3mm}
+\caption{Experimental results with sevenslow, sevenmem, and the combination of sevenslow, sevenmem\ and sevencpu. The duration of all experiments was of at least 30 mins. We measured the Success Rate, Time-to-Service (TTS), Stable Memory and the Time to Stabilize (TT Stab.).}
+\label{tb:resu-seven-siege}
+% \vspace{-3mm}
+\end{table*}
+
+
+% [] Multitier Fog Computing With Large-Scale IoT Data Analytics for Smart Cities
+
+% [ISCC'17] A Mobile Edge Computing-assisted Video Delivery Architecture for Wireless Heterogeneous Networks
+Li \textit{et al.} [1] propose an Integer Linear Programming (ILP) formulation and heuristics for the problem of per user joint video quality and network selection in a multi- access heterogeneous network. 
+
+% [book CDN - Chapter 11-12] Future directions about scalability
+% Scalability means to deploy services where (in the cloud) they will be the most efficiently accessible. It may well be that deep deployments remain the most rational repository for services, but tools are required to analyze alternatives and compare their costs with their respective performance. At the same time, using multiple edge clouds or multitier clouds opens the path to new forms of elasticity, within and between clouds
+
+
+% [MOBILECLOUD'14] A Virtualized, Programmable Content Delivery Network
+Woo \textit{et al.} [MOBILECLOUD'14] propose an open platform for content
+delivery, namely vCDN, that can support a wide range of delivery patterns. It is envisioned that (delivery) control applications would be written by service providers using the platform   for representing the delivery-related requirements on distributing their specific content w.r.t scale, responsiveness, security, and other properties. Specifically, for each control application, the platform can translate it to the form of an overlay network of cloud-based edge servers so as to satisfy the
+application-specific requirements. In doing so, the centralized controller of software-defined networking (SDN) [3] is incorporated into the overlay network manage- ment, and thus building an overlay network and configuring its route, cache, and security functions can be transparently supported at runtime. We explore the combination of NDN and SDN in order to achieve programmability in the domain of content delivery
+
+Em [6] proposes a function that allows CDN applications to discover local caching facilities dynamically, at runtime. For simplicity, analyzes the case when each location offers two caching option: VM-based for each app location-global shared by all local apps.
+
+% [ICC'17] Content Delivery Network Slicing: QoE and Cost Awareness
+Retal \textit{et al.} [ICC'17] propõe uma plataforma de \textit{CDN as a Service (CDNaaS)} onde os usuário podem criar um \textit{slice} de CDN incluindo cache, transcodificador e \textit{streamers}, em ordem de gerenciar uma quantidade de videos para seus usuários. (Aborda CDN na nuvem)
+% [JSAC'18] Optimal VNFs placement in CDN Slicing over Multi-Cloud Environment
+Benkacem \textit{et al.} [JSAC'18] introduce a CDNaaS platform whereby a user can create a CDN slice defined as a set of isolated distributed network of edge servers over multi-cloud domains where a edge server hosts a single VNF such as virtual cache, virtual transcoder, virtual streamer and a CDN-slice-specific coordinator for the life cycle management of the slice resources and also for managing uploaded videos and subscribers. This platform is designed to have the maximum level of flexibility for scaling out of down a CDN slice on top of different public and private Infrastructure as a Service (IaaS) such as Amazon AWS service, Microsoft Azure, Rackspace, and OpenStack-managed cloud. Furthermore, the platform employs mechanisms and algorithms that create cost-efficient QoE-aware CDN slices, involving an optimal placement taking into account the desired QoE level. Therefore, the ob- jective of this paper is to find an efficient cost of CDN slice respecting, on one hand, the CDN owner requirements in terms of QoE, and on the other hand, the cloud infrastructure and its cost.
+
+%The multi-objective solutions give end users and application providers multiple choices and enable them to decide tradeoff policy according to situation. 
+
+% [SmartIoT'17] Elastic Urban Video Surveillance System Using Edge Computing
+[SmartIoT'17] propose Elastic resource allocation for video surveillance systems. The elasticity comes from an algorithm they propose to handle some emergency surveillance event (like tracking a criminal)  which requires  a  sudden  increase  of  computation  and  communication  resources  to  make  sure  that  all  the  possible  images are analyzed within a reasonable timeframe. When such an emergency event happens, network bandwidth allocation is reconfigured  and  computing  resources  are  reallocated  (by launching new VMs in the impacted zone and balancing the workload on nodes). When experimenting in their physical testbed, they verified that data propagation round-trip time is about 5 times lower with edge nodes close to the cameras compared  to  the  cloud.  They  also  found  that  the  time  for launching new VMs in the emergency mode is between one and two minutes, which they claim is acceptable in such a scenario.
+
+%Review: Erase ref forward
+% [Trans'17] Deadline  constrained  video  analysis  via  in-%%transit computational environments
+
+
+
+
+The integrati Traditionally, \ac{RoF} system are mainly used to decrease the energy consumption of the infrastructure \cite{Hall2013}. However, for from the IoT perspective, this is not a key point in the utilization of the \ac{RoF} technology.
