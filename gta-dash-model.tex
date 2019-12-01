@@ -1,0 +1,19 @@
+\section{GTA System model}
+\label{sec:gta-dash-model}
+
+\subsection{System Model}
+
+We design a non-cooperative and simultaneous game, a Dash system consists of two main types, a set of Dash user player $U$ and a set of Dash server $S$. Each user $u \in U$ has a device resolution, and a geolocalization $G_{u}$ offered by the content provider. Each player requests a manifest file~(MPD) and the K chunks of the selected video $v$ with type $CT_{u} \in CT$ that is part of a set of content types denoted $CT$~(={animation, sports, movie, news, documentary}). These video are stored on a subset of servers $S_{v} \subseteq S$, not necessarily the manifest is contained in the target server. Each segment video $v$ consists of $K$  chunks with a fixed duration  $\tau = T/K$, and total time $T$ seconds of video. Each chunk $i \in [1,...,K]$ is encoded at $L$ different bitrate levels, where each bitrate levels $l_{i} \in L$ has its corresponding SSIMplus-based perceptual quality $qt_{i} \in QT$ and its size at bitrate level $l_{i}$ denoted $b_{i}(l_{i}) \in B$~(the set of all chunks). AT each downloading step $i$, user player $u$ estimates the throughput $bw_{i}^{e}$ and measures the current playback buffer $buff_{i} \in [0...buff^{max}]$~($buff^{max}$ is the maximum buffer that is defined by the ABR scheme and depends on the memory capacity of the user player) to select the bitrate level $l_{i+1}$  with its corresponding quality $qt_{i+1}$ for the next chunk $i+1$. Let $L^{v}$ and $QT^{v}$  be the next bitrate levels and perceptual qualities of the available chunks for the corresponding video $v$ that are extracted from the MPD and the quality manifest files, respectively. These lists are defined as follows:
+
+\begin{equation}\label{total_capacity_loss}
+\left\{\begin{matrix}
+L^{v}_{u}  = \{ l^{i}_{1,u}, ..., l^{i}_{i,u}, ...., l^{K}_{K,u} \} \\ 
+QT^{v}_{u} = \{ qt^{i}_{1,u}, ..., qt^{i}_{i,u}, ...., qt^{K}_{K,u} \}
+\end{matrix}\right.
+\end{equation}
+
+where $l=[l_{1}, ..., l_{\varphi}]$ and $qt = [at_{1}, ..., qt_{\varphi}]$, with $\varphi$ being the number of the bitrate levels or qualities listed. Let $qt^{\circ}_{i}(l^{\circ}_{i})$ denote a non-decreasing, non-linear relationship (i.e., $qt_{i}(.)$ function that maps the selected bitrate level to an SSIMplus-based perceptual quality) between bitrate level $l^{\circ}_{i}$ and its corresponding perceptual quality $qt^{\circ}_{i}$. Hence, a higher bitrate level implies a better quality as perceived by the user player.We assume that chunks are sequentially requested vit HTTP GETs~(the next chunk cannot be downloaded until the current chunk is received). With a constant bitrate~(CBR) scheme $b_{i}(l_{i} = l_{i} \times \tau$, while with a variable bitrate~(VBR) method, $b_{i} ~ l_{i}$ may differ across chunks. Thus, the time required to download chunk $i$ is denoted by $d_{i}(l_{i}) = b_{i}(l_{i})/bw^{e}_{i}$.
+
+
+\subsection{GTA Model}
+

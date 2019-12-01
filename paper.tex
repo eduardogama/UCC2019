@@ -28,6 +28,10 @@
 \usepackage{lipsum} % to use fig in multicolumn
 \usepackage{acronym}
 
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+
 %Definition of the acronyms used in this paper
 \acrodef{5G}{five generation}
 \acrodef{CAPEX}{capital expenditures}
@@ -45,8 +49,7 @@
 \begin{document}
     \bstctlcite{IEEEexample:BSTcontrol}
 
-	% make the title area
-	\title{CDN Slicing Resource Management in Edge Computing}
+	\title{A Cost-effective HTTP-based CDN Cache for Fog/Cloud Environments}
 
 \author{
 \IEEEauthorblockN{Eduardo~S.~Gama, Roger~Immich and Luiz~F.~Bittencourt}
@@ -72,6 +75,8 @@
     \acresetall
     
     \input{intro}
+    
+    \input{gta-dash-model}
     
     \input{fog-model}
 
